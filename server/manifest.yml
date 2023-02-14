@@ -1,11 +1,11 @@
   applications:
-  - name: djangoapp
+  - name: djangoapp-sb26
     routes:
-      - route: $HOST.$DOMAIN
+      - route: sb26.apic.eu-gb.mybluemix.net
     memory: 128M
     buildpack: python_buildpack
-  - name: djangoapp-nginx
+  - name: djangoapp-nginx-sb26
     routes:
-      - route: $HOST.$DOMAIN/static
+      - route: sb26.apic.eu-gb.mybluemix.net/static
     memory: 128M
     buildpack: staticfile_buildpack

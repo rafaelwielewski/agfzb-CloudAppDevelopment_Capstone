@@ -6,25 +6,23 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
     <body>
-    <!--Add a registration form here -->
-
-    <form action="{% url 'djangoapp:registration' %}" method="post">
-        <div class="container">
-          <h1>Sign Up</h1>
-          <hr><br>
-          <label for="username"><b>User Name</b></label>
-          <input type="text" class="form-control" placeholder="Enter User Name: " name="username" required><br>
-          <label for="firstname"><b>First Name</b></label>
-          <input type="text" class="form-control" placeholder="Enter First Name: " name="firstname" required><br>
-          <label for="lastname"><b>Last Name</b></label>
-          <input type="text" class="form-control" placeholder="Enter Last Name: " name="lastname" required><br>
-          <label for="psw"><b>Password</b></label>
-          <input type="password" class="form-control" placeholder="Enter Password: " name="psw" required><br>
-          <div>
-              {% csrf_token %}
-              <button class="btn btn-primary" type="submit">Sign Up</button>
-          </div>
-        </div>
-      </form>
+        <form action="{% url 'djangoapp:registration' %}" method="post">
+            <div class="container">
+              <h1>Sign Up</h1>
+              <hr>
+              <label for="username"><b>User Name</b></label>
+              <input type="text" placeholder="Enter User Name: " name="username" required>
+              <label for="firstname"><b>First Name</b></label>
+              <input type="text" placeholder="Enter First Name: " name="firstname" required>
+              <label for="lastname"><b>Last Name</b></label>
+              <input type="text" placeholder="Enter Last Name: " name="lastname" required>
+              <label for="psw"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password: " name="psw" required>
+              <div>
+                  {% csrf_token %}
+                  <button class="button" type="submit">Sign Up</button>
+              </div>
+            </div>
+          </form>
     </body>
 </html>
